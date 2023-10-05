@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://71wnxb6t2h8q"]
+[gd_scene load_steps=6 format=3 uid="uid://71wnxb6t2h8q"]
 
 [ext_resource type="Texture2D" uid="uid://dfrsqtnkefjeg" path="res://icon.svg" id="1_rrwxh"]
 [ext_resource type="Script" path="res://Scripts/CharacterController.gd" id="1_xoonj"]
+[ext_resource type="Script" path="res://Scripts/InventoryManager.gd" id="3_tbkuu"]
+[ext_resource type="Script" path="res://Scripts/UIController.gd" id="4_t60xg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hoclh"]
 
@@ -18,3 +20,9 @@ texture = ExtResource("1_rrwxh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_hoclh")
+
+[node name="InventoryManager" type="Node" parent="."]
+script = ExtResource("3_tbkuu")
+
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("4_t60xg")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bj7rdc0xuskn0"]
+
+[ext_resource type="Texture2D" uid="uid://dfrsqtnkefjeg" path="res://icon.svg" id="1_q2d82"]
+
+[node name="InventoryItem" type="VBoxContainer"]
+
+[node name="InvItemImage" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_q2d82")
+
+[node name="InvItemName" type="Label" parent="."]
+layout_mode = 2
+text = "Pecan"
+horizontal_alignment = 1
+
+[node name="InvItemCount" type="Label" parent="."]
+layout_mode = 2
+text = "1"
+horizontal_alignment = 1
