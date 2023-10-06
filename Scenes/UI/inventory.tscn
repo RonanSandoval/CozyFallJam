@@ -1,48 +1,65 @@
 [gd_scene load_steps=3 format=3 uid="uid://b20dq60usax0l"]
 
-[ext_resource type="Texture2D" uid="uid://dfrsqtnkefjeg" path="res://icon.svg" id="1_byjjk"]
-[ext_resource type="PackedScene" uid="uid://bj7rdc0xuskn0" path="res://Scenes/UI/inventory_item.tscn" id="1_gymsy"]
+[ext_resource type="Script" path="res://Scripts/UI/InventoryUI.gd" id="1_ptvdl"]
+[ext_resource type="Texture2D" uid="uid://dfrsqtnkefjeg" path="res://icon.svg" id="2_88mtv"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 47.0
+offset_top = 33.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-offset_right = 266.0
-offset_bottom = 72.0
-theme_override_font_sizes/font_size = 50
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 917.0
+offset_bottom = 481.0
+theme_override_constants/separation = 10
+
+[node name="PseudoTitle" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 1
 text = "Inventory"
 
-[node name="Inventory" type="GridContainer" parent="."]
-layout_mode = 1
-offset_top = 88.0
-offset_right = 266.0
-offset_bottom = 276.0
+[node name="InvTitle" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Inventory"
+
+[node name="Inventory" type="GridContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
 theme_override_constants/h_separation = 10
 theme_override_constants/v_separation = 10
 columns = 5
+script = ExtResource("1_ptvdl")
+inv_type = "inventory"
 
-[node name="InventoryItem" parent="Inventory" instance=ExtResource("1_gymsy")]
+[node name="EquipTitle" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Equipment"
+
+[node name="EquipInventory" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 5
+script = ExtResource("1_ptvdl")
+inv_type = "equipment"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/EquipInventory"]
 layout_mode = 2
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Inventory"]
+[node name="EquipImage" type="TextureRect" parent="VBoxContainer/EquipInventory/VBoxContainer"]
 layout_mode = 2
+texture = ExtResource("2_88mtv")
 
-[node name="TextureRect2" type="TextureRect" parent="Inventory/VBoxContainer2"]
+[node name="EquipName" type="Label" parent="VBoxContainer/EquipInventory/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_byjjk")
-
-[node name="Label" type="Label" parent="Inventory/VBoxContainer2"]
-layout_mode = 2
-text = "Pecan"
-horizontal_alignment = 1
-
-[node name="Label2" type="Label" parent="Inventory/VBoxContainer2"]
-layout_mode = 2
-text = "1"
+text = "Shoes"
 horizontal_alignment = 1

@@ -2,14 +2,28 @@
 	"recipes":
 	[
 		{
-			"id" : 1,
-			"name" : "pecan pie",
-			"image" : "pecan.png",
+			"id" : 0,
+			"name" : "Pancakes",
+			"image" : "pancakes.png",
 			"price" : 10,
-			"indgredients" : 
+			"ingredients" : 
 				[
-					["pecan", 3],
-					["flour", 1]
+					["Flour", 1],
+					["Egg", 1],
+					["Butter", 1],
+					["Maple Syrup", 1]
+				]
+		},
+		{
+			"id" : 1,
+			"name" : "Mooncake",
+			"image" : "mooncake.png",
+			"price" : 15,
+			"ingredients" : 
+				[
+					["Flour", 2],
+					["Egg", 1],
+					["Maple Syrup", 1]
 				]
 		}
 	

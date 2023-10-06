@@ -8,7 +8,6 @@ var paused : bool = false
 func _ready():
 	scene = preload("res://Scenes/UI/inventory.tscn")
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass

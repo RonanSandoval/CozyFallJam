@@ -1,12 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://71wnxb6t2h8q"]
+[gd_scene load_steps=8 format=3 uid="uid://71wnxb6t2h8q"]
 
 [ext_resource type="Texture2D" uid="uid://dfrsqtnkefjeg" path="res://icon.svg" id="1_rrwxh"]
 [ext_resource type="Script" path="res://Scripts/CharacterController.gd" id="1_xoonj"]
-[ext_resource type="Script" path="res://Scripts/InventoryManager.gd" id="3_tbkuu"]
-[ext_resource type="Script" path="res://Scripts/UIController.gd" id="4_t60xg"]
-[ext_resource type="Texture2D" uid="uid://dfrsqtnkefjeg" path="res://icon.svg" id="1_rrwxh"]
-[ext_resource type="Script" path="res://Scripts/CharacterController.gd" id="1_xoonj"]
 [ext_resource type="Texture2D" uid="uid://biwond464pw3f" path="res://Sprites/Tiles/tiles_packed.png" id="3_2jm7t"]
+[ext_resource type="Script" path="res://Scripts/UIController.gd" id="4_t60xg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hoclh"]
 
@@ -217,11 +214,23 @@ texture = ExtResource("1_rrwxh")
 scale = Vector2(6, 6)
 shape = SubResource("RectangleShape2D_hoclh")
 
-[node name="InventoryManager" type="Node" parent="."]
-script = ExtResource("3_tbkuu")
-
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource("4_t60xg")
+
+[node name="Common UI" type="CanvasLayer" parent="."]
+
+[node name="CoinCounter" type="Label" parent="Common UI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -116.0
+offset_top = 17.0
+offset_right = -24.0
+offset_bottom = 75.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 40
+text = "1000"
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_yqxc8")
 format = 2
