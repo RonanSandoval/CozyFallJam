@@ -7,6 +7,7 @@ func _ready():
 	recipe_dict = read_json("res://Data/recipes.json")
 	print(is_recipe_cookable(0))
 	print(is_recipe_cookable(1))
+	print(get_recipe_count())
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -18,6 +19,22 @@ func get_recipe(id : int) -> Dictionary:
 		if recipe["id"] == id:
 			return recipe
 	return {}
+
+func get_recipe_name(id : int) -> String:
+	for recipe in recipe_dict["recipes"]:
+		if recipe["id"] == id:
+			return recipe["name"]
+	return "ERROR"
+	
+func get_recipe_ingredients(id : int) -> Array:
+	for recipe in recipe_dict["recipes"]:
+		if recipe["id"] == id:
+			return recipe["ingredients"]
+	return []
+	
+func get_recipe_count() -> int:
+	var recipes : Array = recipe_dict["recipes"]
+	return recipes.size()
 
 func is_recipe_cookable(id : int) -> bool:
 	for ingredient in get_recipe(id)["ingredients"]:

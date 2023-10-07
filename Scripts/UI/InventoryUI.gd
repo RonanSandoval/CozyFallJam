@@ -1,7 +1,6 @@
 extends Node
 
 var inv_item_scene : PackedScene = preload("res://Scenes/UI/inventory_item.tscn")
-var inv_node : Node
 
 @export var inv_type : String
 

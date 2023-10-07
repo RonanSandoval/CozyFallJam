@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceecpc106y8e5"]
+
+[ext_resource type="Script" path="res://Scripts/UI/CookingUI.gd" id="1_df2hi"]
+[ext_resource type="FontFile" uid="uid://c4l2tgosc6dll" path="res://Fonts/COOKIE SUPPLY DEMO.OTF" id="1_v3ij6"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+clip_contents = true
+layout_mode = 1
+offset_right = 836.0
+offset_bottom = 400.0
+theme_override_constants/separation = 10
+
+[node name="PseudoTitle" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 1
+text = "Let's Cook!
+"
+
+[node name="InvTitle" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_v3ij6")
+theme_override_font_sizes/font_size = 50
+text = "Let's Cook!"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(1000, 500)
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="Recipes" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+script = ExtResource("1_df2hi")

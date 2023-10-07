@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://djjh8imru6cl6"]
+
+[ext_resource type="Texture2D" uid="uid://dfrsqtnkefjeg" path="res://icon.svg" id="1_e6ab8"]
+[ext_resource type="FontFile" uid="uid://c4l2tgosc6dll" path="res://Fonts/COOKIE SUPPLY DEMO.OTF" id="2_8ua05"]
+
+[node name="Recipe" type="HBoxContainer"]
+
+[node name="RecipeImage" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_e6ab8")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="Recipe Info" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="Recipe Info"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("2_8ua05")
+theme_override_font_sizes/font_size = 30
+text = "Pancakes with Syrup"
+
+[node name="Ingredients" type="HBoxContainer" parent="Recipe Info"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_8ua05")
+theme_override_font_sizes/font_size = 50
+text = "Cook!
+"
