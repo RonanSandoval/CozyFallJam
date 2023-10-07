@@ -5,9 +5,6 @@ var recipe_dict : Dictionary
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	recipe_dict = read_json("res://Data/recipes.json")
-	print(is_recipe_cookable(0))
-	print(is_recipe_cookable(1))
-	print(get_recipe_count())
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

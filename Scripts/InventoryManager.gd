@@ -20,6 +20,7 @@ func test_values():
 	inventory_dict["Maple Syrup"] = 3
 	inventory_dict["Apple"] = 2
 	equipment_dict["Basket"] = 2
+	money = 400
 
 func add_inventory(type, count) -> void:
 	if inventory_dict.has(type):
@@ -64,6 +65,7 @@ func add_money(count) -> void:
 func subtract_money(count) -> void:
 	assert (money - count >= 0)
 	money -= count
+	print(money)
 	
 func get_money() -> int:
 	return money
