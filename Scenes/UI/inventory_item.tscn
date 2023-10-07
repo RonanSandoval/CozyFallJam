@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bj7rdc0xuskn0"]
+[gd_scene load_steps=4 format=3 uid="uid://bj7rdc0xuskn0"]
 
+[ext_resource type="Material" uid="uid://b6fthlm2dcn6e" path="res://Shaders/Wiggler.material" id="1_bjbrx"]
 [ext_resource type="Texture2D" uid="uid://dfrsqtnkefjeg" path="res://icon.svg" id="1_q2d82"]
+[ext_resource type="Script" path="res://Scripts/UI/ThrowButton.gd" id="2_r3dq8"]
 
 [node name="InventoryItem" type="VBoxContainer"]
 
 [node name="InvItemImage" type="TextureRect" parent="."]
+material = ExtResource("1_bjbrx")
 layout_mode = 2
 texture = ExtResource("1_q2d82")
 
@@ -17,3 +20,10 @@ horizontal_alignment = 1
 layout_mode = 2
 text = "1"
 horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+text = "Throw 1"
+script = ExtResource("2_r3dq8")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

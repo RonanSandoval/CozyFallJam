@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/UI/CookingUI.gd" id="1_df2hi"]
 [ext_resource type="FontFile" uid="uid://c4l2tgosc6dll" path="res://Fonts/COOKIE SUPPLY DEMO.OTF" id="1_v3ij6"]
 
-[node name="Control" type="Control"]
+[node name="Control2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

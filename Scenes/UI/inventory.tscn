@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://b20dq60usax0l"]
+[gd_scene load_steps=4 format=3 uid="uid://b20dq60usax0l"]
 
 [ext_resource type="Script" path="res://Scripts/UI/InventoryUI.gd" id="1_ptvdl"]
 [ext_resource type="Texture2D" uid="uid://dfrsqtnkefjeg" path="res://icon.svg" id="2_88mtv"]
+[ext_resource type="Script" path="res://Scripts/UI/CoinCounter.gd" id="3_0rfy7"]
 
-[node name="Control" type="Control"]
+[node name="Control2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -40,11 +41,13 @@ script = ExtResource("1_ptvdl")
 inv_type = "inventory"
 
 [node name="EquipTitle" type="Label" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Equipment"
 
 [node name="EquipInventory" type="GridContainer" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_constants/h_separation = 10
 theme_override_constants/v_separation = 10
@@ -63,3 +66,17 @@ texture = ExtResource("2_88mtv")
 layout_mode = 2
 text = "Shoes"
 horizontal_alignment = 1
+
+[node name="CoinCounter" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -116.0
+offset_top = 17.0
+offset_right = -24.0
+offset_bottom = 75.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 40
+text = "1000"
+script = ExtResource("3_0rfy7")

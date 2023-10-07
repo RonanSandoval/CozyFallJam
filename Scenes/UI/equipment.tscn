@@ -45,7 +45,7 @@ layout_mode = 2
 theme_override_constants/separation = 20
 script = ExtResource("2_scvhc")
 upgrade_name = "Basket"
-price_array = [50, 100, 150]
+price_array = Array[int]([50, 100, 150])
 
 [node name="RecipeImage" type="TextureRect" parent="VBoxContainer/ScrollContainer/EquipmentList/Basket"]
 layout_mode = 2
