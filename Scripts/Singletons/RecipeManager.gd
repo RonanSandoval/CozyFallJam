@@ -34,6 +34,18 @@ func get_recipe_image(id : int) -> String:
 		if recipe["id"] == id:
 			return recipe["image"]
 	return ""
+	
+func get_recipe_image_name(name : String) -> String:
+	for recipe in recipe_dict["recipes"]:
+			if recipe["name"] == name:
+				return recipe["image"]
+	return ""
+
+func get_recipe_price_name(name : String) -> int:
+	for recipe in recipe_dict["recipes"]:
+		if recipe["name"] == name:
+			return recipe["price"]
+	return 0
 
 func get_recipe_ingredients_name(name : String) -> Array:
 	for recipe in recipe_dict["recipes"]:

@@ -24,6 +24,7 @@ func _on_body_exited(body):
 		
 func _input(event):
 	if event.is_action_pressed("interact") and touching_player and !UiManager.paused:
+		MusicManager.play_sound("Button")
 		UiManager.add_menu(menu_scene)
 		
 		

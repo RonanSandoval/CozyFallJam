@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 InventoryManager="*res://Scripts/Singletons/InventoryManager.gd"
 RecipeManager="*res://Scripts/Singletons/RecipeManager.gd"
 UiManager="*res://Scripts/Singletons/UIManager.gd"
+MusicManager="*res://Scenes/Autoload/music.tscn"
 
 [display]
 
@@ -43,4 +44,4 @@ interact={
 
 [rendering]
 
-environment/defaults/default_clear_color=Color(0.886275, 0.788235, 0.65098, 1)
+environment/defaults/default_clear_color=Color(0.917647, 0.764706, 0.505882, 1)

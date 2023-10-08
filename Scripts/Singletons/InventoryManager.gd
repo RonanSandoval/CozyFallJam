@@ -12,7 +12,7 @@ signal food_dropped
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	update_basket_size()
-	test_values()
+	#test_values()
 
 func test_values():
 	inventory_dict["Egg"] = 5
@@ -20,7 +20,7 @@ func test_values():
 	inventory_dict["Maple Syrup"] = 3
 	inventory_dict["Butter"] = 2
 	inventory_dict["Apple"] = 2
-	equipment_dict["Boots"] = 2
+	#equipment_dict["Boots"] = 2
 	money = 400
 
 ### INVENTORY ###
@@ -92,7 +92,7 @@ func get_basket_quantity() -> int:
 	return item_count
 
 func is_basket_full() -> bool:
-	return get_basket_quantity() == basket_size
+	return get_basket_quantity() >= basket_size
 
 func get_basket_ratio() -> float:
 	return float(get_basket_quantity()) / float(basket_size)
@@ -101,6 +101,9 @@ func get_basket_ratio() -> float:
 
 func get_held_food() -> String:
 	return held_food
+	
+func is_holding_food() -> bool:
+	return held_food != ""
 
 func hold_food(food : String):
 	held_food = food

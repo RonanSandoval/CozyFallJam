@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://xnmfcagxwxyq"]
+
+[ext_resource type="Script" path="res://Scripts/Objects/Customer.gd" id="1_bagp1"]
+[ext_resource type="Material" uid="uid://b6fthlm2dcn6e" path="res://Shaders/Wiggler.material" id="2_p7uqf"]
+[ext_resource type="Texture2D" uid="uid://deb6kpidbuoa7" path="res://Sprites/Character/duck.png" id="3_xsu40"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxqxy"]
+
+[node name="Customer" type="Area2D"]
+position = Vector2(-980, 560)
+script = ExtResource("1_bagp1")
+
+[node name="CustomerSPrite" type="Sprite2D" parent="."]
+material = ExtResource("2_p7uqf")
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_xsu40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 7)
+shape = SubResource("RectangleShape2D_qxqxy")
+
+[node name="Patience" type="ColorRect" parent="."]
+offset_left = -52.0
+offset_top = -109.0
+offset_right = 48.0
+offset_bottom = -89.0
+color = Color(0.937255, 0.203922, 0.345098, 1)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

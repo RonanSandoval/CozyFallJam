@@ -17,5 +17,6 @@ func _on_button_pressed():
 	print(recipe_name)
 	for ingredient in RecipeManager.get_recipe_ingredients_name(recipe_name):
 		InventoryManager.subtract_inventory(ingredient[0], ingredient[1])
-		InventoryManager.hold_food(str(get_child(0).texture.get_image()))
-		UiManager.clear_menus()
+	InventoryManager.hold_food(recipe_name)
+	UiManager.clear_menus()
+	MusicManager.play_sound("Cooking")

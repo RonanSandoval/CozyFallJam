@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bj7rdc0xuskn0"]
+[gd_scene load_steps=6 format=3 uid="uid://bj7rdc0xuskn0"]
 
 [ext_resource type="Material" uid="uid://b6fthlm2dcn6e" path="res://Shaders/Wiggler.material" id="1_bjbrx"]
 [ext_resource type="Texture2D" uid="uid://dfrsqtnkefjeg" path="res://icon.svg" id="1_q2d82"]
 [ext_resource type="Script" path="res://Scripts/UI/ThrowButton.gd" id="2_r3dq8"]
+[ext_resource type="FontFile" uid="uid://c4l2tgosc6dll" path="res://Fonts/COOKIE SUPPLY DEMO.OTF" id="3_50c7j"]
+[ext_resource type="FontFile" uid="uid://dkiggofgc0onf" path="res://Fonts/beachday.otf" id="4_rehig"]
 
 [node name="InventoryItem" type="VBoxContainer"]
 
@@ -13,16 +15,19 @@ texture = ExtResource("1_q2d82")
 
 [node name="InvItemName" type="Label" parent="."]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_50c7j")
 text = "Pecan"
 horizontal_alignment = 1
 
 [node name="InvItemCount" type="Label" parent="."]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_rehig")
 text = "1"
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_50c7j")
 text = "Throw 1"
 script = ExtResource("2_r3dq8")
 

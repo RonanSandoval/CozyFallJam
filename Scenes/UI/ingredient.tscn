@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://n4ltu3wwg2dl"]
 
 [ext_resource type="Texture2D" uid="uid://dfrsqtnkefjeg" path="res://icon.svg" id="1_1iy2i"]
-[ext_resource type="FontFile" uid="uid://c4l2tgosc6dll" path="res://Fonts/COOKIE SUPPLY DEMO.OTF" id="2_wyxg1"]
+[ext_resource type="FontFile" uid="uid://dkiggofgc0onf" path="res://Fonts/beachday.otf" id="2_thjpr"]
 
 [node name="Ingredient" type="VBoxContainer"]
 
@@ -15,7 +15,7 @@ expand_mode = 4
 
 [node name="IngredientCount" type="Label" parent="."]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_wyxg1")
+theme_override_fonts/font = ExtResource("2_thjpr")
 theme_override_font_sizes/font_size = 20
 text = "3"
 horizontal_alignment = 1

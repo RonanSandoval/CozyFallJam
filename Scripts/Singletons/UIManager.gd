@@ -3,6 +3,8 @@ extends Node
 signal game_paused
 signal game_resumed
 
+signal ui_changed
+
 var inventory_scene : PackedScene
 
 var ui_node : Node
@@ -21,6 +23,7 @@ func _input(event):
 	
 	# opening and closing inventory
 	if event.is_action_pressed("open_inventory"):
+		MusicManager.play_sound("Button")
 		if ui_node.get_child_count() == 0:
 			add_menu(inventory_scene)
 		else:

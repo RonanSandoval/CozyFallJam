@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://7iaefe72r8tu"]
+
+[ext_resource type="Script" path="res://Scripts/Singletons/MusicManager.gd" id="1_q68dc"]
+[ext_resource type="AudioStream" uid="uid://c3ydebh2nukd8" path="res://Audio/Tree_tone_thingy_v3.mp3" id="2_fhm5k"]
+[ext_resource type="AudioStream" uid="uid://dpc4y88rrrxnp" path="res://Audio/Cooking_Jingle.wav" id="3_qdly3"]
+[ext_resource type="AudioStream" uid="uid://cn1m25d0k46a2" path="res://Audio/Button_Press.wav" id="4_7p3tq"]
+
+[node name="MusicManager" type="Node"]
+script = ExtResource("1_q68dc")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_fhm5k")
+
+[node name="Button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_7p3tq")
+
+[node name="Cooking" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_qdly3")
+volume_db = 10.0

@@ -11,5 +11,5 @@ func _ready():
 
 func _process(delta):
 	position.x=player.position.x
-	position.y=player.position.y
+	position.y = player.position.y
 	position.x = clamp(position.x, left_limit, right_limit)

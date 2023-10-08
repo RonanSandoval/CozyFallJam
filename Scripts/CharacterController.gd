@@ -17,7 +17,7 @@ func _ready():
 	InventoryManager.food_held.connect(_on_food_held)
 	InventoryManager.food_dropped.connect(_on_food_dropped)
 	
-	JUMP_VELOCITY = [-400.0, -600.0, -800.0, -1000.0][InventoryManager.get_equipment_count("Boots")]
+	JUMP_VELOCITY = [-800.0, -1000.0, -1100.0, -1200.0][InventoryManager.get_equipment_count("Boots")]
 	player_node = get_child(0)
 	food_node = get_child(3)
 
@@ -27,9 +27,10 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 	# Handle Jump.
-	if Input.is_action_just_pressed("ui_up") and is_on_floor():
+	if Input.is_action_just_pressed("ui_up") and is_on_floor() and not food_node.visible:
 		# Jump size is dependant on basket fullness
-		velocity.y = JUMP_VELOCITY * (1 - (InventoryManager.get_basket_ratio() * 0.75))
+		JUMP_VELOCITY = [-600.0, -800.0, -1000.0, -1200.0][InventoryManager.get_equipment_count("Boots")]
+		velocity.y = JUMP_VELOCITY * (1 - (InventoryManager.get_basket_ratio() * 0.50))
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -50,7 +51,7 @@ func _on_ui_game_resumed():
 
 func _on_food_held():
 	food_node.visible = true
-	var img_path : String = "res://Sprites/Food/" + InventoryManager.get_held_food()
+	var img_path : String = "res://Sprites/Food/" + RecipeManager.get_recipe_image_name(InventoryManager.get_held_food())
 	if (ResourceLoader.exists(img_path)):
 		food_node.texture = load(img_path)
 
