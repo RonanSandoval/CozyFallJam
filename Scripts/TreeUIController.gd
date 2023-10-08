@@ -1,5 +1,8 @@
 extends Node
 
+signal game_paused
+signal game_resumed
+
 var scene : PackedScene
 
 var paused : bool = false
@@ -19,8 +22,12 @@ func _input(event):
 			var instance : Node = scene.instantiate()
 			add_child(instance)
 			paused = true
+			game_paused.emit()
 		else:
-			for child in get_children():
-				child.queue_free()
-			paused = false
+			clear_menus()
 
+func clear_menus():
+	for child in get_children():
+		child.queue_free()
+	paused = false
+	game_resumed.emit()

@@ -10,7 +10,6 @@ func _ready():
 	
 
 func _process(delta):
-	print(position.x)
 	position.x=player.position.x
 	position.y=player.position.y
 	position.x = clamp(position.x, left_limit, right_limit)

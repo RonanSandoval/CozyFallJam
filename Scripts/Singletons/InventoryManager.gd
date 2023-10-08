@@ -4,6 +4,10 @@ var inventory_dict : Dictionary = {}
 var equipment_dict : Dictionary = {}
 var money : int = 0
 var basket_size : int
+var held_food : String = ""
+
+signal food_held
+signal food_dropped
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,9 +15,10 @@ func _ready():
 	test_values()
 
 func test_values():
-	inventory_dict["Egg"] = 3
-	inventory_dict["Flour"] = 2
+	inventory_dict["Egg"] = 5
+	inventory_dict["Flour"] = 5
 	inventory_dict["Maple Syrup"] = 3
+	inventory_dict["Butter"] = 2
 	inventory_dict["Apple"] = 2
 	equipment_dict["Boots"] = 2
 	money = 400
@@ -91,3 +96,16 @@ func is_basket_full() -> bool:
 
 func get_basket_ratio() -> float:
 	return float(get_basket_quantity()) / float(basket_size)
+
+### HELD FOOD ###
+
+func get_held_food() -> String:
+	return held_food
+
+func hold_food(food : String):
+	held_food = food
+	food_held.emit()
+	
+func drop_food():
+	held_food = ""
+	food_dropped.emit()

@@ -11,6 +11,11 @@ func _ready():
 		var recipe_info : Node = recipe.get_child(1) 
 		recipe_info.get_child(0).text = RecipeManager.get_recipe_name(i)
 		
+		#image
+		var img_path : String = "res://Sprites/Food/" + RecipeManager.get_recipe_image(i)
+		if (ResourceLoader.exists(img_path)):
+			recipe.get_child(0).texture = load(img_path)
+		
 		# disable button if uncookable
 		if !RecipeManager.is_recipe_cookable(i):
 			recipe.get_child(2).disabled = true

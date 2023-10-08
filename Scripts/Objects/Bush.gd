@@ -21,7 +21,7 @@ func _on_body_exited(body):
 		
 func _input(event):
 	if event.is_action_pressed("interact") and touching_player and bush_count > 0:
-		if !InventoryManager.is_basket_full():
+		if !InventoryManager.is_basket_full() and not UiManager.paused:
 			InventoryManager.add_inventory(bush_type, 1)
 			print( InventoryManager.get_inventory_count(bush_type))
 			bush_count -= 1

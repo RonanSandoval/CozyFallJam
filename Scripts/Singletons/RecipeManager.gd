@@ -29,6 +29,18 @@ func get_recipe_ingredients(id : int) -> Array:
 			return recipe["ingredients"]
 	return []
 	
+func get_recipe_image(id : int) -> String:
+	for recipe in recipe_dict["recipes"]:
+		if recipe["id"] == id:
+			return recipe["image"]
+	return ""
+
+func get_recipe_ingredients_name(name : String) -> Array:
+	for recipe in recipe_dict["recipes"]:
+		if recipe["name"] == name:
+			return recipe["ingredients"]
+	return []
+	
 func get_recipe_count() -> int:
 	var recipes : Array = recipe_dict["recipes"]
 	return recipes.size()
