@@ -22,11 +22,17 @@ func _ready():
 		
 		# add ingredients
 		for ingredient in RecipeManager.get_recipe_ingredients(i):
-			print(ingredient[0] + " - " + str(ingredient[1]))
 			var ingredient_node : Node = recipe_scene.instantiate()
 			recipe_info.get_child(1).add_child(ingredient_node)
 			var ingredient_count : String = str(InventoryManager.get_inventory_count(ingredient[0])) + " / " + str(ingredient[1]) 
 			ingredient_node.get_child(1).text = ingredient_count
+			
+			if InventoryManager.get_inventory_count(ingredient[0]) < ingredient[1]:
+				ingredient_node.get_child(1).self_modulate = Color(1,0,0,1)
+			
+			var ing_img_path : String = "res://Sprites/Ingredients/" + ingredient[0] + ".png"
+			if (ResourceLoader.exists(ing_img_path)):
+				ingredient_node.get_child(0).texture = load(ing_img_path)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

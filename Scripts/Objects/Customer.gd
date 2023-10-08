@@ -22,6 +22,8 @@ var touching_player : bool
 
 func _ready():
 	my_id = randi_range(0, animal_imgs.size() - 1)
+	var my_img = "res://Sprites/Character/" + animal_imgs[my_id]
+	get_child(0).texture = load(my_img)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -54,4 +56,12 @@ func calculate_money() -> int:
 	print(base_value)
 	print(patience_value)
 	print(fave_value)
+	
+	if patience <= 0:
+		MusicManager.play_sound("Meh")
+	elif fave_value == 1:
+		MusicManager.play_sound("Good")
+	else:
+		MusicManager.play_sound("Great")
+	
 	return (base_value + patience_value) *  fave_value

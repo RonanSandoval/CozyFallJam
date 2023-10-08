@@ -11,9 +11,11 @@ position = Vector2(-980, 560)
 script = ExtResource("1_bagp1")
 
 [node name="CustomerSPrite" type="Sprite2D" parent="."]
+z_index = -2
 material = ExtResource("2_p7uqf")
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("3_xsu40")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(2, 7)

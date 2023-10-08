@@ -16,6 +16,11 @@ func _ready():
 		var instance : Node = inv_item_scene.instantiate()
 		add_child(instance)
 		instance.get_child(1).text = item
+		
+		var img_path : String = "res://Sprites/Ingredients/" + item + ".png"
+		if (ResourceLoader.exists(img_path)):
+			instance.get_child(0).texture = load(img_path)
+		
 		if inv_type == "equipment":
 			instance.get_child(2).text = "Level " + str(my_inv[item])
 		else:

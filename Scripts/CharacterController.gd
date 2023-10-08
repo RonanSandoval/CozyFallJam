@@ -31,6 +31,7 @@ func _physics_process(delta):
 		# Jump size is dependant on basket fullness
 		JUMP_VELOCITY = [-600.0, -800.0, -1000.0, -1200.0][InventoryManager.get_equipment_count("Boots")]
 		velocity.y = JUMP_VELOCITY * (1 - (InventoryManager.get_basket_ratio() * 0.50))
+		MusicManager.play_sound("Jump")
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -38,8 +39,10 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction * SPEED
 		player_node.set_flip_h(direction > 0)
+		get_child(0).play("walking")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		get_child(0).play("standing")
 
 	move_and_slide()
 

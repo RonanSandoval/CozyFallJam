@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://n4ltu3wwg2dl"]
+[gd_scene load_steps=4 format=3 uid="uid://n4ltu3wwg2dl"]
 
 [ext_resource type="Texture2D" uid="uid://dfrsqtnkefjeg" path="res://icon.svg" id="1_1iy2i"]
+[ext_resource type="Material" uid="uid://b6fthlm2dcn6e" path="res://Shaders/Wiggler.material" id="1_fdr1h"]
 [ext_resource type="FontFile" uid="uid://dkiggofgc0onf" path="res://Fonts/beachday.otf" id="2_thjpr"]
 
 [node name="Ingredient" type="VBoxContainer"]
 
 [node name="IngredientImg" type="TextureRect" parent="."]
+material = ExtResource("1_fdr1h")
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 size_flags_horizontal = 4

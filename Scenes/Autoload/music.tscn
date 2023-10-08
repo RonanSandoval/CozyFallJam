@@ -1,19 +1,69 @@
-[gd_scene load_steps=5 format=3 uid="uid://7iaefe72r8tu"]
+[gd_scene load_steps=15 format=3 uid="uid://7iaefe72r8tu"]
 
 [ext_resource type="Script" path="res://Scripts/Singletons/MusicManager.gd" id="1_q68dc"]
-[ext_resource type="AudioStream" uid="uid://c3ydebh2nukd8" path="res://Audio/Tree_tone_thingy_v3.mp3" id="2_fhm5k"]
+[ext_resource type="AudioStream" uid="uid://d3fs483hgsn40" path="res://Audio/Tree_tone_thingy_v5.mp3" id="2_ytvi1"]
 [ext_resource type="AudioStream" uid="uid://dpc4y88rrrxnp" path="res://Audio/Cooking_Jingle.wav" id="3_qdly3"]
 [ext_resource type="AudioStream" uid="uid://cn1m25d0k46a2" path="res://Audio/Button_Press.wav" id="4_7p3tq"]
+[ext_resource type="AudioStream" uid="uid://dj57835ilprkm" path="res://Audio/Buy.mp3" id="5_r6f24"]
+[ext_resource type="AudioStream" uid="uid://c0tv5qwtpp5vn" path="res://Audio/Door_Open.mp3" id="6_iugjs"]
+[ext_resource type="AudioStream" uid="uid://dox0mb812y8c3" path="res://Audio/Drop.mp3" id="7_lg454"]
+[ext_resource type="AudioStream" uid="uid://bu0dovqvybe0y" path="res://Audio/Harvest.mp3" id="8_g0rfa"]
+[ext_resource type="AudioStream" uid="uid://b2imllnxyxqq4" path="res://Audio/jump.mp3" id="9_y88u3"]
+[ext_resource type="AudioStream" uid="uid://bibvbl50vjpi2" path="res://Audio/Menu_Close.mp3" id="10_n5ixt"]
+[ext_resource type="AudioStream" uid="uid://b76n7nqxjn1ox" path="res://Audio/Menu_Open.mp3" id="11_mixmh"]
+[ext_resource type="AudioStream" uid="uid://ohopg5lxljs7" path="res://Audio/Order_Good.mp3" id="12_d5fyc"]
+[ext_resource type="AudioStream" uid="uid://djmxsiulq6dae" path="res://Audio/Order_Great.mp3" id="13_iuk1i"]
+[ext_resource type="AudioStream" uid="uid://bruf6hluwpmg2" path="res://Audio/Order_Meh.mp3" id="14_sm184"]
 
 [node name="MusicManager" type="Node"]
 script = ExtResource("1_q68dc")
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_fhm5k")
+stream = ExtResource("2_ytvi1")
+volume_db = -5.0
 
 [node name="Button" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_7p3tq")
 
 [node name="Cooking" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_qdly3")
+volume_db = 10.0
+
+[node name="Buy" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_r6f24")
+volume_db = 10.0
+
+[node name="Door" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_iugjs")
+
+[node name="Drop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_lg454")
+volume_db = 10.0
+
+[node name="Harvest" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_g0rfa")
+volume_db = 10.0
+
+[node name="Jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_y88u3")
+volume_db = 10.0
+
+[node name="MenuClose" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_n5ixt")
+volume_db = 10.0
+
+[node name="MenuOpen" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_mixmh")
+volume_db = 10.0
+
+[node name="Good" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_d5fyc")
+volume_db = 10.0
+
+[node name="Great" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_iuk1i")
+volume_db = 10.0
+
+[node name="Meh" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_sm184")
 volume_db = 10.0

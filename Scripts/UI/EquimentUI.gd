@@ -53,6 +53,9 @@ func _on_button_pressed():
 	if upgrade_name == "Line":
 		line_expanded.emit()
 	
+	InventoryManager.update_basket_size()
+	MusicManager.play_sound("Buy")
+	
 	UiManager.ui_changed.emit()
 
 func _on_ui_change():

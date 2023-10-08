@@ -12,7 +12,7 @@ signal food_dropped
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	update_basket_size()
-	#test_values()
+	test_values()
 
 func test_values():
 	inventory_dict["Egg"] = 5
@@ -80,7 +80,7 @@ func get_money() -> int:
 ### BASKET ###
 
 func update_basket_size():
-	basket_size = [15, 20, 25, 30][get_equipment_count("Basket")]
+	basket_size = [10, 15, 23, 30][get_equipment_count("Basket")]
 	
 func get_basket_size() -> int:
 	return basket_size

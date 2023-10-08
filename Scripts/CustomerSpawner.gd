@@ -20,6 +20,8 @@ func _on_timeout():
 	instance.position.x = -980 - (customer_count * 250)
 	instance.position.y = 560
 	
+	MusicManager.play_sound("Door")
+	
 	if customer_count < 2 + InventoryManager.get_equipment_count("Line"):
 		start(randi_range(1,2) + customer_count * 2)
 	else:

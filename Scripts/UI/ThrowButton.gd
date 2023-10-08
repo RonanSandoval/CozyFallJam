@@ -15,6 +15,7 @@ func _on_pressed():
 	var item_type : String = get_parent().get_child(1).text
 	InventoryManager.subtract_inventory(item_type, 1)
 	var new_count : int = InventoryManager.get_inventory_count(item_type)
+	MusicManager.play_sound("Drop")
 	if new_count == 0:
 		get_parent().queue_free()
 	else:

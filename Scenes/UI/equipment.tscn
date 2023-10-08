@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://c6mgn6adn4lfe"]
+[gd_scene load_steps=9 format=3 uid="uid://c6mgn6adn4lfe"]
 
 [ext_resource type="FontFile" uid="uid://c4l2tgosc6dll" path="res://Fonts/COOKIE SUPPLY DEMO.OTF" id="1_1js46"]
 [ext_resource type="Script" path="res://Scripts/UI/EquimentUI.gd" id="2_scvhc"]
 [ext_resource type="Texture2D" uid="uid://dfrsqtnkefjeg" path="res://icon.svg" id="2_u3w6n"]
+[ext_resource type="Texture2D" uid="uid://bx8hbjguep28g" path="res://Sprites/Equipment/basket.png" id="3_ckda1"]
+[ext_resource type="Material" uid="uid://b6fthlm2dcn6e" path="res://Shaders/Wiggler.material" id="3_x47lr"]
 [ext_resource type="FontFile" uid="uid://dkiggofgc0onf" path="res://Fonts/beachday.otf" id="4_ek232"]
+[ext_resource type="Texture2D" uid="uid://c6i1au08aq8ji" path="res://Sprites/Equipment/shoes.png" id="5_xlvxa"]
+[ext_resource type="Texture2D" uid="uid://dgxydp0ycw756" path="res://Sprites/Equipment/line.png" id="7_k1w85"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -14,6 +18,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 51.0
 offset_top = 129.0
 offset_right = 715.0
@@ -21,6 +26,7 @@ offset_bottom = 765.0
 color = Color(0.709804, 0.533333, 0.329412, 0)
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 51.0
 offset_top = 129.0
 offset_right = 727.0
@@ -72,8 +78,9 @@ upgrade_name = "Basket"
 price_array = Array[int]([50, 100, 150])
 
 [node name="RecipeImage" type="TextureRect" parent="VBoxContainer/ScrollContainer/EquipmentList/Basket"]
+material = ExtResource("3_x47lr")
 layout_mode = 2
-texture = ExtResource("2_u3w6n")
+texture = ExtResource("3_ckda1")
 expand_mode = 2
 stretch_mode = 6
 
@@ -113,8 +120,9 @@ upgrade_name = "Boots"
 price_array = Array[int]([30, 120, 200])
 
 [node name="RecipeImage" type="TextureRect" parent="VBoxContainer/ScrollContainer/EquipmentList/Boots"]
+material = ExtResource("3_x47lr")
 layout_mode = 2
-texture = ExtResource("2_u3w6n")
+texture = ExtResource("5_xlvxa")
 expand_mode = 2
 stretch_mode = 6
 
@@ -147,6 +155,7 @@ theme_override_font_sizes/font_size = 50
 text = "$100"
 
 [node name="Ladder" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/EquipmentList"]
+visible = false
 layout_mode = 2
 theme_override_constants/separation = 20
 script = ExtResource("2_scvhc")
@@ -195,8 +204,9 @@ upgrade_name = "Line"
 price_array = Array[int]([50, 150, 200])
 
 [node name="RecipeImage" type="TextureRect" parent="VBoxContainer/ScrollContainer/EquipmentList/Line"]
+material = ExtResource("3_x47lr")
 layout_mode = 2
-texture = ExtResource("2_u3w6n")
+texture = ExtResource("7_k1w85")
 expand_mode = 2
 stretch_mode = 6
 

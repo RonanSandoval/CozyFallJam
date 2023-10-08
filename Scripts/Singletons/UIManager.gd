@@ -33,12 +33,14 @@ func add_menu(new_menu : PackedScene):
 	var instance : Node = new_menu.instantiate()
 	ui_node.add_child(instance)
 	paused = true
+	MusicManager.play_sound("MenuOpen")
 	game_paused.emit()
 
 func clear_menus():
 	for child in ui_node.get_children():
 		child.queue_free()
 	paused = false
+	MusicManager.play_sound("MenuClose")
 	game_resumed.emit()
 	
 func update_ui_node():
