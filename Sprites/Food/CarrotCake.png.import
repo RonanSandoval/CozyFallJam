@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bagp2otoh0ch6"
-path="res://.godot/imported/CarrotCake.png-faf441c265bcad603e19fa55d20ba3af.ctex"
+path="res://.godot/imported/carrotcake.png-9dd542a1fb195c121b1d9f48ce1e88a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Food/CarrotCake.png"
-dest_files=["res://.godot/imported/CarrotCake.png-faf441c265bcad603e19fa55d20ba3af.ctex"]
+source_file="res://Sprites/Food/carrotcake.png"
+dest_files=["res://.godot/imported/carrotcake.png-9dd542a1fb195c121b1d9f48ce1e88a1.ctex"]
 
 [params]
 

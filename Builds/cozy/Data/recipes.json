@@ -1,0 +1,124 @@
+{
+	"recipes":
+	[
+		{
+			"id" : 0,
+			"name" : "Pancakes",
+			"image" : "pancakes.png",
+			"price" : 10,
+			"ingredients" : 
+				[
+					["Flour", 1],
+					["Egg", 1],
+					["Butter", 1],
+					["Maple Syrup", 1]
+				]
+		},
+		{
+			"id" : 1,
+			"name" : "Mooncake",
+			"image" : "mooncake.png",
+			"price" : 8,
+			"ingredients" : 
+				[
+					["Flour", 2],
+					["Egg", 1],
+					["Maple Syrup", 1]
+				]
+		},
+		{
+			"id" : 2,
+			"name" : "Apple Pie",
+			"image" : "applepie.png",
+			"price" : 15,
+			"ingredients" : 
+				[
+					["Apple", 2],
+					["Flour", 1],
+					["Butter", 1]
+				]
+		},
+		{
+			"id" : 3,
+			"name" : "Pumpkin Soup",
+			"image" : "pumpkinsoup.png",
+			"price" : 15,
+			"ingredients" : 
+				[
+					["Pumpkin", 2],
+					["Butter", 2],
+				]
+		},
+		{
+			"id" : 4,
+			"name" : "Pumpkin Spiece Latte",
+			"image" : "pumpkinspicelatte.png",
+			"price" : 18,
+			"ingredients" : 
+				[
+					["Pumpkin", 1],
+					["Maple Syrup", 3],
+				]
+		},
+		{
+			"id" : 5,
+			"name" : "Fall Kale Salad",
+			"image" : "fallkalesalad.png",
+			"price" : 20,
+			"ingredients" : 
+				[
+					["Kale", 2],
+					["Pumpkin", 1],
+					["Apple", 1],
+				]
+		},
+		{
+			"id" : 6,
+			"name" : "Sneaky Spooky Cookies",
+			"image" : "sneakyspookycookies.png",
+			"price" : 20,
+			"ingredients" : 
+				[
+					["Flour", 2],
+					["Kale", 1],
+					["Butter", 1],
+				]
+		},
+		{
+			"id" : 7,
+			"name" : "Carrot Cake",
+			"image" : "carrotcake.png",
+			"price" : 25,
+			"ingredients" : 
+				[
+					["Carrot", 3],
+					["Flour", 1],
+					["Egg", 1],
+				]
+		},
+		{
+			"id" : 8,
+			"name" : "Butternut Noodle Nest",
+			"image" : "noodlenest.png",
+			"price" : 25,
+			"ingredients" : 
+				[
+					["Butternut Squash", 3],
+					["Egg", 1]
+				]
+		},
+		{
+			"id" : 9,
+			"name" : "Cranberry Cocktail",
+			"image" : "cranberrycocktail.png",
+			"price" : 30,
+			"ingredients" : 
+				[
+					["Cranberry", 3],
+					["Maple Syrup", 1],
+					["Apple", 1],
+				]
+		},
+			
+	]
+}

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tp8l5hw63g3r"
-path="res://.godot/imported/CranberryCocktail.png-d0bc486227f6b81b47fbeffa3c095c57.ctex"
+path="res://.godot/imported/cranberrycocktail.png-0b028bd1fb73ba26b6bfe21231391c21.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Food/CranberryCocktail.png"
-dest_files=["res://.godot/imported/CranberryCocktail.png-d0bc486227f6b81b47fbeffa3c095c57.ctex"]
+source_file="res://Sprites/Food/cranberrycocktail.png"
+dest_files=["res://.godot/imported/cranberrycocktail.png-0b028bd1fb73ba26b6bfe21231391c21.ctex"]
 
 [params]
 

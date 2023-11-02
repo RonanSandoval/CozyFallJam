@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://23sepfm5s5mt"
-path="res://.godot/imported/SneakySpookyCookies.png-fa7e1ef057ed5016e85958a97c4b3710.ctex"
+path="res://.godot/imported/sneakyspookycookies.png-84808f536f0f6795dd7d9355bf7d0307.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Food/SneakySpookyCookies.png"
-dest_files=["res://.godot/imported/SneakySpookyCookies.png-fa7e1ef057ed5016e85958a97c4b3710.ctex"]
+source_file="res://Sprites/Food/sneakyspookycookies.png"
+dest_files=["res://.godot/imported/sneakyspookycookies.png-84808f536f0f6795dd7d9355bf7d0307.ctex"]
 
 [params]
 

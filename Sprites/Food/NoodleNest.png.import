@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btfsl6e8b5akq"
-path="res://.godot/imported/NoodleNest.png-1136c988d7d90cd482b69d0b188e291f.ctex"
+path="res://.godot/imported/noodlenest.png-bb89d0f519c1445d5430a86600d35f17.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Food/NoodleNest.png"
-dest_files=["res://.godot/imported/NoodleNest.png-1136c988d7d90cd482b69d0b188e291f.ctex"]
+source_file="res://Sprites/Food/noodlenest.png"
+dest_files=["res://.godot/imported/noodlenest.png-bb89d0f519c1445d5430a86600d35f17.ctex"]
 
 [params]
 

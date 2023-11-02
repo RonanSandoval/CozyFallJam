@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0b1gb8bxe4y2"
-path="res://.godot/imported/FallKaleSalad.png-7cb8920fbbe71e0c8aca010036367e92.ctex"
+path="res://.godot/imported/fallkalesalad.png-a8f567f1d15aa4e59b3723957e9e183a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Food/FallKaleSalad.png"
-dest_files=["res://.godot/imported/FallKaleSalad.png-7cb8920fbbe71e0c8aca010036367e92.ctex"]
+source_file="res://Sprites/Food/fallkalesalad.png"
+dest_files=["res://.godot/imported/fallkalesalad.png-a8f567f1d15aa4e59b3723957e9e183a.ctex"]
 
 [params]
 
